@@ -1,0 +1,1 @@
+    j(".menu_disabled a").attr("href", "#");
