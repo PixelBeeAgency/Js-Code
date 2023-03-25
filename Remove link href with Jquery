@@ -1,0 +1,10 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".xs_etn_thumb_meta_wraper a").each(function(){
+        if($(this).hasClass("xs-event-term")){
+            $(this).removeAttr("href");
+        }
+    });
+});
+</script>
