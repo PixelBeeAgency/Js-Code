@@ -1,0 +1,29 @@
+add_action( 'wp_head', function () { ?>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+	$(document).ready(function(){
+		var bubbleElems = [
+			'general',
+			'billing',
+			];
+		
+		$('.tab_info_section').hide();
+		$('.' + bubbleElems[0] + '_info_sec').show();
+		for(var elem of bubbleElems){
+
+			$('.' + elem).attr('bubbleId' , elem);
+			
+			$('.' + elem).click(function(){
+			$('.account_tab').removeClass('active_sec')
+			$(this).addClass('active_sec')
+				var bubbleId = $(this).attr('bubbleId');
+				$('.tab_info_section').hide();
+				$('.' + bubbleId + '_info_sec').show();
+			});
+			
+		} 
+	});
+
+
+
+</script>
