@@ -1,0 +1,11 @@
+jQuery(document).ready(function($) {
+  $('.click_services').click(function() {
+    var divId = $(this).closest('.elementor-section').attr('id');
+    window.location.href = 'https://prom.blanktest.xyz/our-services#' + divId;
+  });
+});
+
+jQuery(document).ready(function($) {
+  var divId = window.location.hash.substr(1);
+  $('.elementor-section#' + divId + ' .jet-accordion__item.jet-toggle').addClass('active-toggle');
+});
